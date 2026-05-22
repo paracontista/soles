@@ -15,18 +15,18 @@
 (define (distance x y)
   (sqrt (+ (expt x 2) (expt y 2))))
 
-;; (distance 1 0) (distance 0 1) ...
-
 ;; add-middle-char : String -> String -> String
 ;; function which appends an underscore between two strings.
 (define (add-middle-char s s2)
   (string-append s underscore s2))
 
-;; (add-middle-char prefix suffix)
-
 ;; add-char-at-index : String -> Char -> Int -> String
 ;; function which appends a Char at a given index inside a String.
 (define (add-char-at-index s c idx)
-  (string-append (substring str 0 idx) c (substring s idx)))
+  (string-append (substring s 0 idx) c (substring s idx)))
 
-;; (add-char-at-index str underscore i)
+#|
+(distance 1 0) (distance 0 1) ...
+(add-middle-char prefix suffix)
+(add-char-at-index str underscore i)
+#|
