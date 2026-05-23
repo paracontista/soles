@@ -1,5 +1,7 @@
 #lang htdp/bsl
 
+(require 2htdp/image)
+
 (define x 3)
 (define y 4)
 (define prefix "hello")
@@ -36,3 +38,12 @@
 ;; (add-middle-char prefix suffix)
 ;; (add-char-at-index str underscore i)
 ;; (delete-char-at-index str i)
+
+;; draw-boat : image?
+(define draw-boat
+  (overlay/xy (right-triangle 36 48 "solid" "Ghost White")
+              -20 20
+              (overlay/xy (rectangle 4 40 "solid" "Brown")
+                          -20 40
+                          (rotate 180 (wedge 36 180 "solid" "Saddle Brown")))))
+;; draw-boat
