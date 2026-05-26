@@ -209,6 +209,7 @@
 
 ;; Exercise 31
 ;; First batch program.
+;; letter : String -> String -> String -> String
 (define (letter first-name last-name signature-name)
   (string-append
    (opening first-name)
@@ -217,15 +218,18 @@
    "\n\n"
    (closing signature-name)))
 
+;; opening : String -> String
 (define (opening first-name)
   (string-append "Dear " first-name ","))
 
+;; body : String -> String -> String
 (define (body first-name last-name)
   (string-append
    "We have discovered that all people with the" "\n"
    "last name " last-name " have won our lottery. So, " "\n"
    first-name ", " "hurry and pick up your prize."))
 
+;; closing : String -> String
 (define (closing signature-name)
   (string-append
    "Sincerely,"
@@ -233,6 +237,7 @@
    signature-name
    "\n"))
 
+;; main : File -> File -> File -> File
 (define (main in-fst in-lst in-signature out)
   (write-file out
               (letter (read-file in-fst)
@@ -241,17 +246,17 @@
 
 ;; Execise 31
 ;; Created and tested files.
+(main "io/fst.txt"
+      "io/lst.txt"
+      "io/signature.txt"
+      "io/letter.txt")
 
 ;; Exercise 32
 ;; First interactive program.
-
-;; number->square : Int -> Image
-;; function which draws a square of a given size (per side.)
-
 (define BACKGROUND (empty-scene 100 100))
 (define DOT (circle 3 "solid" "Violet Red"))
 
-;; main- : WorldState -> ???
+;; main- : WorldState -> World (Window)
 (define (main- y)
   (big-bang y
             [on-tick sub1]
