@@ -271,6 +271,39 @@
 ;; stop : ?Int -> ?KeyStroke -> Int
 (define (stop y ke) 0)
 
+;; Exercise 33
+;; "Research the 'year 2000' problem"
+;; Basically it refers to the Y2K problem where computers coulnd't distinguish between 2000 and 1900.
+
+;; Exercise 34
+;; string-first : String -> 1String
+;; function which extracts the first character from a non-empty String.
+;; (define (string-first str) (string-ith str 0))
+
+;; Exercise 35
+;; string-last : String -> 1String
+;; function which extracts the last character from a non-empty String.
+;; (define (string-last str) (string-ith str (- (string-length str) 1)))
+
+;; Exercise 36
+;; image-area : Image -> Int
+;; function which computes the area of a given Image.
+;; (define (image-area img)
+;;   (* (image-width img)
+;;      (image-height img)))
+
+;; Exercise 37
+;; string-rest : String -> String
+;; function which produces a String like the given one with the first character removed.
+;; Example: (string-rest "aeiou") => "eiou"
+(define (string-rest str) '()) 
+
+;; Exercise 38
+;; string-remove-last : String -> String
+;; function which produces a String like the given one with last character removed.
+;; Example: (string-remove-last "aeiou") => "aeio"
+(define (string-remove-last str) '())
+
 ;; Tests
 (distance 5 0)
 (cvolume  2)
